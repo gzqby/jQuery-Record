@@ -100,3 +100,4 @@ a.observe(element);
 （3）这些属性是只读的。
 -- window.innerWidth：浏览器可视区域的高
 -- window.innerHeight ：浏览器可视区域的宽
+-- Element.getBoundingClientRect() 返回元素大小及相对于视口的位置
