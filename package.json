@@ -1,0 +1,28 @@
+{
+  "name": "jquery-record",
+  "version": "1.0.0",
+  "description": "jQuery.key 82,jQuery.fn.key 141\r 1.DomEval：script能通过text传递code给浏览器，之前没留意过的东西。  \r ```\r var script = document.createElement(\"script\");\r script.text = \"console.log(document.querySelector('#root'));document.querySelector('#root').innerHTML='hello wolrd'\";\r document.head.appendChild(script).parentNode.removeChild(script);\r ```\r 2.判断对象为空的一种：\r ```\r for (name in obj) {\r   return false;\r }\r ```\r 3.plainObject\r ```\r if ( !obj || toString.call( obj ) !== \"[object Object]\" ) {\r   return false;\r }\r proto = getProto( obj );\r if ( !proto ) {\r   return true;\r }",
+  "main": "main.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@babel/preset-env": "^7.9.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel": "babel src -d lib",
+    "start": "npm run babel & node lib/demo2.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zgoby/jQuery-Record.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zgoby/jQuery-Record/issues"
+  },
+  "homepage": "https://github.com/zgoby/jQuery-Record#readme"
+}

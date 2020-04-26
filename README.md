@@ -101,3 +101,12 @@ a.observe(element);
 -- window.innerWidth：浏览器可视区域的高  
 -- window.innerHeight ：浏览器可视区域的宽
 -- Element.getBoundingClientRect() 返回元素大小及相对于视口的位置
+13..c3{width: "max-content"}  
+14.react事件evetn带出的currentTarget控制dom，
+```
+currentTarget.scrollLeft = 10;  
+```
+15.表格及单元格的宽度取决于其包含的内容与否？
+```
+table-layout: auto | fixed
+```
