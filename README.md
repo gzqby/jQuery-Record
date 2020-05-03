@@ -13,6 +13,7 @@ for (name in obj) {
 }
 ```
 3.plainObject
+-- 1,
 ```
 if ( !obj || toString.call( obj ) !== "[object Object]" ) {
   return false;
@@ -24,6 +25,19 @@ if ( !proto ) {
 
 Ctor = hasOwn.call( proto, "constructor" ) && proto.constructor;
 return typeof Ctor === "function" && fnToString.call( Ctor ) === ObjectFunctionString;
+```
+-- 2,
+```
+export default function isPlainObject(obj) {
+  if (typeof obj !== 'object' || obj === null) return false
+
+  let proto = obj
+  while (Object.getPrototypeOf(proto) !== null) {
+    proto = Object.getPrototypeOf(proto)
+  }
+
+  return Object.getPrototypeOf(obj) === proto
+}
 ```
 4.jQuery的arrayLike:  
 ```
